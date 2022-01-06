@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>App</title>
+    </head>
+
+    <body>
+        {% if user_ip %}
+            <h1>Hola Mundo, soy la ip: {{user_ip}} </h1>
+        {% else %}
+            <a href=" {{ url_for('index') }} "> Ir al inicio de la pagina </a>
+        {% endif %}
+
+        <ul>
+            {% for todo in todos %}
+                <li> {{todo}} </li>
+            {% endfor %}
+        </ul>       
+
+    </body>
+</html>
+
