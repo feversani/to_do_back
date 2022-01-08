@@ -7,8 +7,8 @@
 {% endblock %}
 
 {% block content %}
-    {% if user_ip %}    
-        <h1>Hola Mundo, soy la ip: {{user_ip}} </h1> 
+    {% if user_ip %}
+        <h1>Hola, soy la lista de tarea de la IP: {{user_ip}} </h1> 
         <ul>
             {% for todo in todos %}
                 {{ macros.render_todo(todo) }}
